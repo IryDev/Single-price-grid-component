@@ -1,0 +1,125 @@
+:root {
+  --Cyan: hsl(179, 62%, 43%);
+  --Bright-Yellow: hsl(71, 73%, 54%);
+  --Light-Gray: hsl(204, 43%, 93%);
+  --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+body {
+  background-color: var(--Light-Gray);
+}
+
+h1,
+h2,
+p {
+  margin-bottom: 5%;
+}
+
+.wrapper {
+  width: 50%;
+}
+
+.row {
+  background-color: white;
+  padding: 5%;
+  border-radius: 10px 10px 0 0;
+}
+
+.row h1 {
+  color: var(--Cyan);
+}
+
+.row h2 {
+  color: var(--Bright-Yellow);
+}
+
+.row p {
+  color: var(--Grayish-Blue);
+}
+
+.row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.subrow1 {
+  background-color: var(--Cyan);
+  padding: 10%;
+  border-radius: 0 0 0 10px;
+}
+
+.subrow1 h1,
+.subrow2 h1,
+.subrow1 h2,
+.subrow1 p {
+  color: white;
+}
+
+.subrow2 {
+  background-color: #4abdbd;
+  padding: 10%;
+  border-radius: 0 0 10px 0;
+}
+
+.subrow2 p {
+  color: var(--Light-Gray);
+}
+
+button {
+  padding: 5% 10%;
+  width: 100%;
+  background-color: var(--Bright-Yellow);
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+h2 span {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--Light-Gray);
+}
+
+@media screen and (max-width: 700px) {
+  .row2 {
+    grid-template-columns: 1fr;
+  }
+
+  .subrow1{
+    border-radius: inherit;
+  }
+
+  .subrow2{
+    border-radius: 0 0 10px 10px;
+  }
+
+  .wrapper {
+    width: 80%;
+  }
+}
